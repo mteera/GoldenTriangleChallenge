@@ -1,4 +1,4 @@
-func isGoldenTriangle(_ values: [Int]) -> Bool {
+func hasGoldenTriangle(_ values: [Int]) -> Bool {
     // Check if it is a triangle
     if values.count < 3 {
         return false
@@ -16,4 +16,4 @@ func isGoldenTriangle(_ values: [Int]) -> Bool {
     return false
 }
 
-isGoldenTriangle([10, 2, 5, 1, 8, 20])
+hasGoldenTriangle([10, 2, 5, 1, 8, 20])

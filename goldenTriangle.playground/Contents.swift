@@ -3,16 +3,17 @@ func isGoldenTriangle(_ values: [Int]) -> Bool {
     if values.count < 3 {
         return false
     }
+    // Sort array
+    let sortedArray = values.sorted()
     // Sum up each sides while looping just once
-    for i in 0 ... values.count - 3 {
-        if values[i] + values[i + 1] > values[i + 2],
-           values[i] + values[i + 2] > values[i + 1],
-           values[i + 2] + values[i + 1] > values[i] {
+    for i in 0...values.count where i < sortedArray.count - 2 {
+        if sortedArray[i] + sortedArray[i + 1] > sortedArray[i + 2],
+           sortedArray[i] + sortedArray[i + 2] > sortedArray[i + 1],
+           sortedArray[i + 2] + sortedArray[i + 1] > sortedArray[i] {
             return true
         }
     }
     return false
 }
 
-isGoldenTriangle([3, 4, 20])
-isGoldenTriangle([8, 9, 10])
+isGoldenTriangle([10, 2, 5, 1, 8, 20])

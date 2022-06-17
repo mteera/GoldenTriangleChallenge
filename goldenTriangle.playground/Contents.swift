@@ -6,7 +6,7 @@ func hasGoldenTriangle(_ values: [Int]) -> Bool {
     // Sort array
     let sortedArray = values.sorted()
     // Sum up each sides while looping just once
-    for i in 0...values.count where i < sortedArray.count - 2 {
+    for i in 0...sortedArray.count where i < sortedArray.count - 2 {
         if sortedArray[i] + sortedArray[i + 1] > sortedArray[i + 2],
            sortedArray[i] + sortedArray[i + 2] > sortedArray[i + 1],
            sortedArray[i + 2] + sortedArray[i + 1] > sortedArray[i] {
